@@ -5,19 +5,19 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <title>MostroEuropa — European Mostro Community</title>
-  <meta name="description" content="MostroEuropa is an independent European community and coordinator for peer-to-peer Bitcoin trading through Mostro.">
+  <meta name="description" content="MostroEuropa is an independent European community around the open-source Mostro peer-to-peer Bitcoin protocol.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://mostroeuropa.github.io/">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MostroEuropa">
   <meta property="og:title" content="MostroEuropa — European Mostro Community">
-  <meta property="og:description" content="Peer-to-peer Bitcoin trading through Mostro. No KYC. Lightning. Nostr.">
+  <meta property="og:description" content="An independent European community around the open-source Mostro protocol.">
   <meta property="og:url" content="https://mostroeuropa.github.io/">
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="MostroEuropa">
-  <meta name="twitter:description" content="European Mostro community · P2P Bitcoin · Lightning · Nostr">
+  <meta name="twitter:description" content="European community around Mostro · Bitcoin P2P · Lightning · Nostr">
 
   <style>
     :root{
@@ -46,10 +46,7 @@
     }
 
     a{color:inherit}
-    img{max-width:100%;display:block}
-
     .wrap{width:min(1120px,calc(100% - 36px));margin:0 auto}
-    .mono{font-family:var(--mono)}
 
     header{
       position:sticky;
@@ -100,11 +97,8 @@
     nav a:hover{color:var(--orange)}
 
     .hero{
-      padding:86px 0 72px;
-      display:grid;
-      grid-template-columns:1.35fr .65fr;
-      gap:46px;
-      align-items:end;
+      padding:100px 0 90px;
+      max-width:900px;
     }
 
     .eyebrow{
@@ -122,10 +116,11 @@
       font-size:clamp(3.4rem,8vw,7.2rem);
       letter-spacing:-.065em;
       margin-bottom:25px;
-      max-width:850px;
+      max-width:900px;
     }
 
     h1 span{color:var(--orange)}
+
     h2{
       font-size:clamp(2.2rem,5vw,4.1rem);
       letter-spacing:-.05em;
@@ -137,39 +132,31 @@
     .lead{
       font-size:clamp(1.08rem,2vw,1.35rem);
       color:#344139;
-      max-width:760px;
+      max-width:780px;
       margin-bottom:18px;
     }
 
-    .sublead{color:var(--muted);max-width:760px}
-
-    .hero-card,.card{
-      background:var(--paper);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
+    .sublead{
+      color:var(--muted);
+      max-width:780px;
     }
 
-    .hero-card{padding:26px}
-
-    .status{
-      display:flex;align-items:center;gap:9px;
-      font-size:.8rem;font-weight:800;
-      color:var(--green);
-      text-transform:uppercase;
-      letter-spacing:.08em;
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:30px;
     }
-
-    .dot{width:9px;height:9px;border-radius:50%;background:#43a36f}
-    .big-number{font-size:2.5rem;font-weight:850;letter-spacing:-.05em;margin:18px 0 2px}
-    .small{font-size:.84rem;color:var(--muted)}
-
-    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 
     .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:13px 18px;border-radius:999px;
-      text-decoration:none;font-weight:800;font-size:.9rem;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:13px 18px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:800;
+      font-size:.9rem;
       border:1px solid var(--green);
     }
 
@@ -177,7 +164,10 @@
     .btn.secondary{background:transparent;color:var(--green)}
     .btn:hover{transform:translateY(-1px)}
 
-    section{padding:76px 0;border-top:1px solid rgba(36,79,59,.12)}
+    section{
+      padding:76px 0;
+      border-top:1px solid rgba(36,79,59,.12);
+    }
 
     .three{
       display:grid;
@@ -191,8 +181,18 @@
       gap:18px;
     }
 
-    .card{padding:28px}
-    .card p{color:var(--muted);margin-bottom:0}
+    .card{
+      padding:28px;
+      background:var(--paper);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .card p{
+      color:var(--muted);
+      margin-bottom:0;
+    }
 
     .label{
       font-family:var(--mono);
@@ -214,97 +214,6 @@
       font-size:.88rem;
     }
 
-    .copy-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:14px}
-
-    button.copy{
-      border:0;border-radius:999px;padding:11px 16px;
-      background:var(--green);color:white;font-weight:800;cursor:pointer;
-    }
-
-    #copy-status{font-family:var(--mono);font-size:.78rem;color:var(--green)}
-
-    .facts{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:12px;
-      margin-top:28px;
-    }
-
-    .fact{
-      background:#e8e1d2;
-      border-radius:16px;
-      padding:18px;
-    }
-
-    .fact strong{display:block;font-size:1.2rem;margin-top:4px}
-
-    .code{
-      background:#18231d;
-      color:#e8f3ec;
-      border-radius:18px;
-      padding:22px;
-      overflow:auto;
-      font-family:var(--mono);
-      font-size:.86rem;
-      line-height:1.7;
-    }
-
-    .relay-list{display:grid;gap:10px;margin-top:15px}
-
-    .relay{
-      padding:14px 16px;border-radius:14px;background:#edf0e9;
-      border:1px solid #d6ddd4;font-family:var(--mono);font-size:.86rem;
-      overflow-wrap:anywhere;
-    }
-
-    .currency-list{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
-
-    .currency{
-      font-family:var(--mono);font-weight:800;font-size:.77rem;
-      border:1px solid #b8c5bb;border-radius:999px;padding:7px 10px;background:#f8fbf7;
-    }
-
-    .steps{counter-reset:step;display:grid;gap:14px;margin-top:28px}
-
-    .step{
-      counter-increment:step;
-      display:grid;grid-template-columns:46px 1fr;gap:14px;
-      align-items:start;padding:20px;background:var(--paper);
-      border:1px solid var(--line);border-radius:18px;
-    }
-
-    .step:before{
-      content:counter(step, decimal-leading-zero);
-      font-family:var(--mono);font-weight:900;color:var(--orange);
-    }
-
-    .step p{margin:0;color:var(--muted)}
-
-    .notice{
-      margin-top:20px;
-      border-left:4px solid var(--orange);
-      padding:15px 18px;background:#fff5ec;border-radius:0 14px 14px 0;
-      color:#674a36;
-    }
-
-    .video-wrap{
-      position:relative;
-      width:100%;
-      aspect-ratio:16/9;
-      overflow:hidden;
-      border-radius:16px;
-      background:#000;
-      margin-top:22px;
-    }
-
-    .video-wrap iframe{
-      position:absolute;
-      inset:0;
-      width:100%;
-      height:100%;
-      border:0;
-    }
-
     .community-box{
       background:var(--green);
       color:#fff;
@@ -312,9 +221,20 @@
       padding:42px;
     }
 
-    .community-box p{color:#dfe9e2;max-width:750px}
-    .community-box .btn{border-color:#fff;color:#fff}
-    .community-box .btn.primary{background:#fff;color:var(--green)}
+    .community-box p{
+      color:#dfe9e2;
+      max-width:760px;
+    }
+
+    .community-box .btn{
+      border-color:#fff;
+      color:#fff;
+    }
+
+    .community-box .btn.primary{
+      background:#fff;
+      color:var(--green);
+    }
 
     footer{
       padding:48px 0 70px;
@@ -323,18 +243,26 @@
     }
 
     footer .row{
-      display:flex;justify-content:space-between;gap:20px;align-items:flex-start;
-      border-top:1px solid rgba(36,79,59,.12);padding-top:28px;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      align-items:flex-start;
+      border-top:1px solid rgba(36,79,59,.12);
+      padding-top:28px;
     }
 
-    footer a{color:var(--green);font-weight:800;text-decoration:none}
+    footer a{
+      color:var(--green);
+      font-weight:800;
+      text-decoration:none;
+    }
 
     @media (max-width:850px){
-      .hero{grid-template-columns:1fr;padding-top:56px}
-      .three,.two,.facts{grid-template-columns:1fr}
+      .three,.two{grid-template-columns:1fr}
       nav ul{display:none}
       .community-box{padding:30px}
       footer .row{flex-direction:column}
+      .hero{padding-top:64px}
     }
   </style>
 </head>
@@ -347,13 +275,12 @@
       <span class="mark">🧌</span>
       <span>MostroEuropa</span>
     </a>
+
     <nav aria-label="Main navigation">
       <ul>
-        <li><a href="#connect">Connect</a></li>
-        <li><a href="#clients">Clients</a></li>
-        <li><a href="#tutorial">Tutorial</a></li>
-        <li><a href="#coordinator">Coordinator</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#community">Community</a></li>
+        <li><a href="#contact">Contact</a></li>
         <li><a href="https://mostro.network/" target="_blank" rel="noopener noreferrer">Mostro ↗</a></li>
       </ul>
     </nav>
@@ -362,265 +289,56 @@
 
 <main id="top">
 
-  <div class="wrap hero">
-    <div>
+  <div class="wrap">
+    <div class="hero">
       <div class="eyebrow">European Mostro Community</div>
-      <h1>Bitcoin P2P.<br><span>No KYC.</span></h1>
+
+      <h1>Bitcoin P2P.<br><span>Community first.</span></h1>
+
       <p class="lead">
-        MostroEuropa is an independent European community operating a coordinator for the open-source Mostro protocol.
+        MostroEuropa is an independent European community around Mostro, an open-source peer-to-peer Bitcoin protocol built on Lightning and Nostr.
       </p>
+
       <p class="sublead">
-        Trade Bitcoin directly with other people through Mostro using Lightning and Nostr. MostroEuropa is not the protocol itself — it is one community and one coordinator connected to it.
+        This website is the public home of the MostroEuropa community. For information about the Mostro protocol, its software and documentation, visit the official Mostro project.
       </p>
 
       <div class="actions">
-        <a class="btn primary" href="#connect">Connect to MostroEuropa</a>
-        <a class="btn secondary" href="https://t.me/MostroEuropaCommunity" target="_blank" rel="noopener noreferrer">Join the community</a>
-        <a class="btn secondary" href="https://t.me/MostroEuropa" target="_blank" rel="noopener noreferrer">Live offers</a>
+        <a class="btn primary" href="https://t.me/MostroEuropaCommunity" target="_blank" rel="noopener noreferrer">Join the community</a>
+        <a class="btn secondary" href="https://mostro.network/" target="_blank" rel="noopener noreferrer">Visit Mostro ↗</a>
       </div>
     </div>
-
-    <aside class="hero-card">
-      <div class="status"><span class="dot"></span> Coordinator online</div>
-      <div class="big-number">0.6%</div>
-      <div class="small">Coordinator fee</div>
-      <hr style="border:0;border-top:1px solid var(--line);margin:22px 0">
-      <div class="small">Mostro version</div>
-      <strong>v0.18.8 · Protocol 2</strong>
-      <div class="small" style="margin-top:14px">Order range</div>
-      <strong>100 — 1,000,000 sats</strong>
-      <div class="small" style="margin-top:14px">Anti-abuse bond</div>
-      <strong>Enabled</strong>
-    </aside>
   </div>
 
-  <section>
+  <section id="about">
     <div class="wrap">
-      <div class="eyebrow">What this is</div>
-      <h2>Protocol, coordinator, community.</h2>
+      <div class="eyebrow">About</div>
+      <h2>A European community around Mostro.</h2>
 
       <div class="three">
         <article class="card">
-          <div class="label">Mostro</div>
-          <h3>The protocol</h3>
-          <p>Open-source peer-to-peer Bitcoin trading over Nostr, using Lightning hold invoices to coordinate trades.</p>
-        </article>
-
-        <article class="card">
-          <div class="label">MostroEuropa</div>
-          <h3>The community</h3>
-          <p>A European community for users who want to learn, trade, help each other and build reputation through real P2P use.</p>
-        </article>
-
-        <article class="card">
-          <div class="label">Coordinator</div>
-          <h3>The access point</h3>
-          <p>Compatible Mostro clients connect using the coordinator's Nostr public key and public relays.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="connect">
-    <div class="wrap">
-      <div class="eyebrow">Connect</div>
-      <h2>Use the coordinator identity.</h2>
-      <p class="lead">Always verify the coordinator by its public key, not by a display name alone.</p>
-
-      <div class="card">
-        <div class="label">MostroEuropa coordinator NPUB</div>
-        <div id="npub" class="npub">npub1mg36x8t42usn32upfxg35ppzfqf2xj76v7w2hf7trqj0ma79jtkqrj3q9m</div>
-
-        <div class="copy-row">
-          <button class="copy" onclick="copyNpub()">Copy npub</button>
-          <span id="copy-status" aria-live="polite"></span>
-        </div>
-
-        <div class="facts">
-          <div class="fact"><span class="small">Mostro</span><strong>0.18.8</strong></div>
-          <div class="fact"><span class="small">Protocol</span><strong>2 / NIP-44</strong></div>
-          <div class="fact"><span class="small">PoW</span><strong>0</strong></div>
-          <div class="fact"><span class="small">Bond</span><strong>Enabled</strong></div>
-        </div>
-      </div>
-
-      <div class="two" style="margin-top:18px">
-        <article class="card">
-          <div class="label">Public relays</div>
-          <h3>Recommended for client configuration</h3>
-
-          <div class="relay-list">
-            <div class="relay">wss://relay.mostro.network</div>
-            <div class="relay">wss://mostro-p2p.tech</div>
-            <div class="relay">wss://relay.shadowbip.com</div>
-          </div>
-
-          <p class="small" style="margin-top:14px">
-            These are public relays used by the coordinator and are sufficient for the examples below.
+          <div class="label">Open source</div>
+          <h3>Mostro</h3>
+          <p>
+            Mostro is an open-source peer-to-peer Bitcoin protocol using Lightning and Nostr. The protocol and its software are developed by the Mostro project.
           </p>
         </article>
 
         <article class="card">
-          <div class="label">Accepted fiat</div>
-          <h3>European multi-fiat</h3>
-
-          <div class="currency-list">
-            <span class="currency">EUR</span>
-            <span class="currency">GBP</span>
-            <span class="currency">CHF</span>
-            <span class="currency">PLN</span>
-            <span class="currency">CZK</span>
-            <span class="currency">HUF</span>
-            <span class="currency">RON</span>
-            <span class="currency">SEK</span>
-            <span class="currency">DKK</span>
-            <span class="currency">NOK</span>
-            <span class="currency">ISK</span>
-            <span class="currency">ALL</span>
-            <span class="currency">BAM</span>
-            <span class="currency">MDL</span>
-            <span class="currency">MKD</span>
-            <span class="currency">RSD</span>
-            <span class="currency">UAH</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="clients">
-    <div class="wrap">
-      <div class="eyebrow">Clients</div>
-      <h2>Choose how you want to connect.</h2>
-
-      <div class="two">
-        <article class="card">
-          <div class="label">Mostro Mobile · Android</div>
-          <h3>Add MostroEuropa as a custom node</h3>
-
-          <div class="steps">
-            <div class="step"><p>Open <strong>Settings</strong> in Mostro Mobile.</p></div>
-            <div class="step"><p>Scroll to the <strong>Mostro</strong> section and tap the current node.</p></div>
-            <div class="step"><p>Choose <strong>Add Custom Node</strong>.</p></div>
-            <div class="step"><p>Paste the MostroEuropa npub shown above. The name field is optional.</p></div>
-            <div class="step"><p>Confirm and select the new custom node.</p></div>
-          </div>
-
-          <div class="actions">
-            <a class="btn secondary" href="https://zapstore.dev/apps/network.mostro.app" target="_blank" rel="noopener noreferrer">Zapstore ↗</a>
-            <a class="btn secondary" href="https://github.com/MostroP2P/mobile" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-          </div>
+          <div class="label">Community</div>
+          <h3>MostroEuropa</h3>
+          <p>
+            MostroEuropa brings together European users interested in learning about Mostro, sharing experience, helping other users and contributing to the ecosystem.
+          </p>
         </article>
 
         <article class="card">
-          <div class="label">MostriX · Terminal UI</div>
-          <h3>Change the coordinator from Settings</h3>
-
-          <div class="steps">
-            <div class="step"><p>Install and launch <strong>MostriX</strong>.</p></div>
-            <div class="step"><p>Open <strong>Settings</strong> and select <strong>Change Mostro Pubkey</strong>.</p></div>
-            <div class="step"><p>Paste the MostroEuropa npub or hex public key.</p></div>
-            <div class="step"><p>Open <strong>Mostro Info</strong> and verify the coordinator information.</p></div>
-          </div>
-
-          <div class="actions">
-            <a class="btn secondary" href="https://github.com/MostroP2P/mostrix" target="_blank" rel="noopener noreferrer">MostriX ↗</a>
-            <a class="btn secondary" href="https://mostro.network/docs-english/mostrix.html" target="_blank" rel="noopener noreferrer">Official guide ↗</a>
-          </div>
+          <div class="label">Independent</div>
+          <h3>Separate from the project</h3>
+          <p>
+            MostroEuropa is an independent community. It is not the Mostro protocol itself and does not represent the official Mostro project.
+          </p>
         </article>
-      </div>
-
-      <article class="card" id="tutorial" style="margin-top:18px">
-        <div class="label">Video tutorial</div>
-        <h3>Getting started with Mostro</h3>
-        <p>A practical walkthrough showing how to get started with Mostro and make your first P2P Bitcoin trade.</p>
-
-        <div class="video-wrap">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/Lnyjgecfd_w"
-            title="Getting started with Mostro"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
-        </div>
-
-        <div class="actions">
-          <a class="btn secondary" href="https://www.youtube.com/watch?v=Lnyjgecfd_w" target="_blank" rel="noopener noreferrer">Watch on YouTube ↗</a>
-        </div>
-      </article>
-
-      <article class="card" style="margin-top:18px">
-        <div class="label">mostro-cli · Advanced users</div>
-        <h3>Ready-to-use shell configuration</h3>
-
-        <pre class="code"><code>export MOSTRO_PUBKEY="npub1mg36x8t42usn32upfxg35ppzfqf2xj76v7w2hf7trqj0ma79jtkqrj3q9m"
-export RELAYS="wss://relay.mostro.network,wss://mostro-p2p.tech,wss://relay.shadowbip.com"
-
-mostro-cli listorders</code></pre>
-
-        <div class="notice">
-          On first use, mostro-cli creates a local identity and a 12-word mnemonic. Back it up before relying on the client for active trades.
-        </div>
-
-        <div class="actions">
-          <a class="btn secondary" href="https://github.com/MostroP2P/mostro-cli" target="_blank" rel="noopener noreferrer">mostro-cli ↗</a>
-        </div>
-      </article>
-    </div>
-  </section>
-
-  <section id="coordinator">
-    <div class="wrap">
-      <div class="eyebrow">Coordinator</div>
-      <h2>Current operating parameters.</h2>
-
-      <div class="three">
-        <article class="card">
-          <div class="label">Fee</div>
-          <h3>0.6%</h3>
-          <p>Configured coordinator fee.</p>
-        </article>
-
-        <article class="card">
-          <div class="label">Order limits</div>
-          <h3>100 — 1,000,000 sats</h3>
-          <p>Minimum and maximum order size.</p>
-        </article>
-
-        <article class="card">
-          <div class="label">Anti-abuse</div>
-          <h3>Bond enabled</h3>
-          <p>Taker bond enabled according to the coordinator's published configuration.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="security">
-    <div class="wrap">
-      <div class="eyebrow">Security</div>
-      <h2>Understand the flow. Start small.</h2>
-
-      <div class="three">
-        <article class="card">
-          <h3>Verify the npub</h3>
-          <p>Use the coordinator public key. Do not rely on display names alone.</p>
-        </article>
-
-        <article class="card">
-          <h3>Keep the trade inside Mostro</h3>
-          <p>Do not move the settlement process outside the protocol while a trade is active.</p>
-        </article>
-
-        <article class="card">
-          <h3>Back up your client identity</h3>
-          <p>Store any mnemonic or recovery phrase safely before using the client for active trades.</p>
-        </article>
-      </div>
-
-      <div class="notice">
-        Never send seed phrases, private keys, Nostr nsec keys or wallet recovery data through support channels.
       </div>
     </div>
   </section>
@@ -628,16 +346,16 @@ mostro-cli listorders</code></pre>
   <section id="community">
     <div class="wrap">
       <div class="community-box">
-        <div class="eyebrow" style="color:#ffb07b">Community first</div>
-        <h2>MostroEuropa is built by people.</h2>
+        <div class="eyebrow" style="color:#ffb07b">Community</div>
+        <h2>Talk with the community.</h2>
 
         <p>
-          We are building a European community around the Mostro protocol. New contributors are welcome — dispute solvers, moderators, country and language contributors, technical contributors and documentation helpers.
+          The Telegram community is the main place for discussion, user-to-user help, project news and information about using Mostro. New contributors and people curious about the protocol are welcome.
         </p>
 
         <div class="actions">
-          <a class="btn primary" href="https://t.me/MostroEuropaCommunity" target="_blank" rel="noopener noreferrer">Community & support</a>
-          <a class="btn" href="https://t.me/MostroEuropa" target="_blank" rel="noopener noreferrer">Live P2P offers</a>
+          <a class="btn primary" href="https://t.me/MostroEuropaCommunity" target="_blank" rel="noopener noreferrer">Open Telegram community</a>
+          <a class="btn" href="https://mostro.network/docs-english/" target="_blank" rel="noopener noreferrer">Official Mostro docs ↗</a>
         </div>
       </div>
     </div>
@@ -645,7 +363,7 @@ mostro-cli listorders</code></pre>
 
   <section id="contact">
     <div class="wrap">
-      <div class="eyebrow">Private contact</div>
+      <div class="eyebrow">Contact</div>
       <h2>Contact MostroEuropa.</h2>
 
       <div class="two">
@@ -656,13 +374,14 @@ mostro-cli listorders</code></pre>
           <div class="npub">npub1yag9ggwzdrekxput74qq66p88wv8r68r2f3lm3znycqqyh408ufs7htp3e</div>
 
           <div class="actions">
-            <a class="btn secondary" href="https://njump.me/npub1yag9ggwzdrekxput74qq66p88wv8r68r2f3lm3znycqqyh408ufs7htp3e" target="_blank" rel="noopener noreferrer">Open profile ↗</a>
+            <a class="btn secondary" href="https://njump.me/npub1yag9ggwzdrekxput74qq66p88wv8r68r2f3lm3znycqqyh408ufs7htp3e" target="_blank" rel="noopener noreferrer">Open Nostr profile ↗</a>
           </div>
         </article>
 
         <article class="card">
           <div class="label">SimpleX</div>
           <h3>SimpleX Chat</h3>
+
           <p>Direct contact without exposing a phone number.</p>
 
           <div class="actions">
@@ -679,7 +398,7 @@ mostro-cli listorders</code></pre>
   <div class="wrap row">
     <div>
       <strong style="color:var(--ink)">MostroEuropa</strong><br>
-      Independent European community for Mostro.
+      Independent European community around Mostro.
     </div>
 
     <div>
@@ -690,21 +409,6 @@ mostro-cli listorders</code></pre>
     </div>
   </div>
 </footer>
-
-<script>
-  async function copyNpub(){
-    const value=document.getElementById('npub').textContent.trim();
-    const status=document.getElementById('copy-status');
-
-    try{
-      await navigator.clipboard.writeText(value);
-      status.textContent='Copied.';
-      setTimeout(()=>status.textContent='',1800);
-    }catch(e){
-      status.textContent='Copy failed — select manually.';
-    }
-  }
-</script>
 
 </body>
 </html>
