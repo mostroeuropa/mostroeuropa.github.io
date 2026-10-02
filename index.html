@@ -36,7 +36,9 @@
     }
 
     *{box-sizing:border-box}
+
     html{scroll-behavior:smooth}
+
     body{
       margin:0;
       background:var(--bg);
@@ -46,7 +48,11 @@
     }
 
     a{color:inherit}
-    .wrap{width:min(1120px,calc(100% - 36px));margin:0 auto}
+
+    .wrap{
+      width:min(1120px,calc(100% - 36px));
+      margin:0 auto;
+    }
 
     header{
       position:sticky;
@@ -76,8 +82,10 @@
     }
 
     .mark{
-      width:38px;height:38px;
-      display:grid;place-items:center;
+      width:38px;
+      height:38px;
+      display:grid;
+      place-items:center;
       border-radius:12px;
       background:var(--green);
       color:#fff;
@@ -88,12 +96,14 @@
       display:flex;
       list-style:none;
       gap:22px;
-      margin:0;padding:0;
+      margin:0;
+      padding:0;
       font-size:.88rem;
       font-weight:700;
     }
 
     nav a{text-decoration:none}
+
     nav a:hover{color:var(--orange)}
 
     .hero{
@@ -111,7 +121,11 @@
       margin-bottom:18px;
     }
 
-    h1,h2,h3{line-height:1.06;margin-top:0}
+    h1,h2,h3{
+      line-height:1.06;
+      margin-top:0;
+    }
+
     h1{
       font-size:clamp(3.4rem,8vw,7.2rem);
       letter-spacing:-.065em;
@@ -127,7 +141,10 @@
       margin-bottom:18px;
     }
 
-    h3{font-size:1.25rem;letter-spacing:-.02em}
+    h3{
+      font-size:1.25rem;
+      letter-spacing:-.02em;
+    }
 
     .lead{
       font-size:clamp(1.08rem,2vw,1.35rem);
@@ -160,9 +177,19 @@
       border:1px solid var(--green);
     }
 
-    .btn.primary{background:var(--green);color:#fff}
-    .btn.secondary{background:transparent;color:var(--green)}
-    .btn:hover{transform:translateY(-1px)}
+    .btn.primary{
+      background:var(--green);
+      color:#fff;
+    }
+
+    .btn.secondary{
+      background:transparent;
+      color:var(--green);
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+    }
 
     section{
       padding:76px 0;
@@ -214,6 +241,51 @@
       font-size:.88rem;
     }
 
+    .relay-list{
+      margin:18px 0 0;
+      padding:0;
+      list-style:none;
+    }
+
+    .relay-list li{
+      margin-top:8px;
+      padding:12px 14px;
+      border:1px dashed #a9b1a9;
+      border-radius:12px;
+      background:#f8f5ec;
+      overflow-wrap:anywhere;
+      font-family:var(--mono);
+      font-size:.82rem;
+    }
+
+    .platforms{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:18px;
+    }
+
+    .platform{
+      display:inline-block;
+      padding:7px 11px;
+      border-radius:999px;
+      background:#f3efe4;
+      border:1px solid var(--line);
+      font-family:var(--mono);
+      font-size:.76rem;
+      font-weight:700;
+    }
+
+    .note{
+      margin-top:24px;
+      padding:18px 20px;
+      border-left:4px solid var(--orange);
+      background:rgba(255,253,247,.65);
+      color:var(--muted);
+      border-radius:0 12px 12px 0;
+      font-size:.9rem;
+    }
+
     .community-box{
       background:var(--green);
       color:#fff;
@@ -258,11 +330,25 @@
     }
 
     @media (max-width:850px){
-      .three,.two{grid-template-columns:1fr}
-      nav ul{display:none}
-      .community-box{padding:30px}
-      footer .row{flex-direction:column}
-      .hero{padding-top:64px}
+      .three,.two{
+        grid-template-columns:1fr;
+      }
+
+      nav ul{
+        display:none;
+      }
+
+      .community-box{
+        padding:30px;
+      }
+
+      footer .row{
+        flex-direction:column;
+      }
+
+      .hero{
+        padding-top:64px;
+      }
     }
   </style>
 </head>
@@ -279,9 +365,14 @@
     <nav aria-label="Main navigation">
       <ul>
         <li><a href="#about">About</a></li>
+        <li><a href="#get-started">Get started</a></li>
         <li><a href="#community">Community</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="https://mostro.network/" target="_blank" rel="noopener noreferrer">Mostro ↗</a></li>
+        <li>
+          <a href="https://mostro.network/" target="_blank" rel="noopener noreferrer">
+            Mostro ↗
+          </a>
+        </li>
       </ul>
     </nav>
   </div>
@@ -296,16 +387,41 @@
       <h1>Bitcoin P2P.<br><span>Community first.</span></h1>
 
       <p class="lead">
-        MostroEuropa is an independent European community around Mostro, an open-source peer-to-peer Bitcoin protocol built on Lightning and Nostr.
+        MostroEuropa is an independent European community around Mostro,
+        an open-source peer-to-peer Bitcoin protocol built on Lightning and Nostr.
       </p>
 
       <p class="sublead">
-        This website is the public home of the MostroEuropa community. For information about the Mostro protocol, its software and documentation, visit the official Mostro project.
+        This website is the public home of the MostroEuropa community.
+        For information about the Mostro protocol, its software and documentation,
+        visit the official Mostro project.
       </p>
 
       <div class="actions">
-        <a class="btn primary" href="https://t.me/MostroEuropaCommunity" target="_blank" rel="noopener noreferrer">Join the community</a>
-        <a class="btn secondary" href="https://mostro.network/" target="_blank" rel="noopener noreferrer">Visit Mostro ↗</a>
+        <a
+          class="btn primary"
+          href="https://t.me/MostroEuropaCommunity"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Join the community
+        </a>
+
+        <a
+          class="btn secondary"
+          href="#get-started"
+        >
+          Get started
+        </a>
+
+        <a
+          class="btn secondary"
+          href="https://mostro.network/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit Mostro ↗
+        </a>
       </div>
     </div>
   </div>
@@ -313,81 +429,228 @@
   <section id="about">
     <div class="wrap">
       <div class="eyebrow">About</div>
+
       <h2>A European community around Mostro.</h2>
 
       <div class="three">
+
         <article class="card">
           <div class="label">Open source</div>
           <h3>Mostro</h3>
+
           <p>
-            Mostro is an open-source peer-to-peer Bitcoin protocol using Lightning and Nostr. The protocol and its software are developed by the Mostro project.
+            Mostro is an open-source peer-to-peer Bitcoin protocol using
+            Lightning and Nostr. The protocol and its software are developed
+            by the Mostro project.
           </p>
         </article>
 
         <article class="card">
           <div class="label">Community</div>
           <h3>MostroEuropa</h3>
+
           <p>
-            MostroEuropa brings together European users interested in learning about Mostro, sharing experience, helping other users and contributing to the ecosystem.
+            MostroEuropa brings together European users interested in learning
+            about Mostro, sharing experience, helping other users and
+            contributing to the ecosystem.
           </p>
         </article>
 
         <article class="card">
           <div class="label">Independent</div>
           <h3>Separate from the project</h3>
+
           <p>
-            MostroEuropa is an independent community. It is not the Mostro protocol itself and does not represent the official Mostro project.
+            MostroEuropa is an independent community. It is not the Mostro
+            protocol itself and does not represent the official Mostro project.
           </p>
         </article>
+
       </div>
+    </div>
+  </section>
+
+  <section id="get-started">
+    <div class="wrap">
+
+      <div class="eyebrow">Get started</div>
+
+      <h2>Connect to MostroEuropa.</h2>
+
+      <p class="lead">
+        Use the official Mostro application and add or select the
+        MostroEuropa node.
+      </p>
+
+      <div class="two">
+
+        <article class="card">
+          <div class="label">Step 1</div>
+
+          <h3>Download the official Mostro app</h3>
+
+          <p>
+            Download the latest release directly from the official
+            MostroP2P GitHub repository.
+          </p>
+
+          <div class="platforms">
+            <span class="platform">Android</span>
+            <span class="platform">Linux</span>
+            <span class="platform">Windows</span>
+            <span class="platform">macOS</span>
+            <span class="platform">iOS</span>
+          </div>
+
+          <div class="actions">
+            <a
+              class="btn primary"
+              href="https://github.com/MostroP2P/app/releases/latest"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download latest release ↗
+            </a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="label">Step 2</div>
+
+          <h3>Add MostroEuropa</h3>
+
+          <p>
+            In the Mostro app, add or select the MostroEuropa node using
+            the following public key.
+          </p>
+
+          <div class="npub">
+            npub1mg36x8t42usn32upfxg35ppzfqf2xj76v7w2hf7trqj0ma79jtkqrj3q9m
+          </div>
+
+          <p style="margin-top:20px;">
+            If relay information is required, the following public Nostr
+            relays can be used:
+          </p>
+
+          <ul class="relay-list">
+            <li>wss://relay.mostro.network</li>
+            <li>wss://mostro-p2p.tech</li>
+            <li>wss://relay.shadowbip.com</li>
+          </ul>
+        </article>
+
+      </div>
+
+      <div class="note">
+        The Mostro application is developed and distributed by the official
+        MostroP2P project. MostroEuropa does not develop or distribute the
+        application and is an independent community around the Mostro ecosystem.
+      </div>
+
     </div>
   </section>
 
   <section id="community">
     <div class="wrap">
+
       <div class="community-box">
-        <div class="eyebrow" style="color:#ffb07b">Community</div>
+
+        <div class="eyebrow" style="color:#ffb07b">
+          Community
+        </div>
+
         <h2>Talk with the community.</h2>
 
         <p>
-          The Telegram community is the main place for discussion, user-to-user help, project news and information about using Mostro. New contributors and people curious about the protocol are welcome.
+          The Telegram community is the main place for discussion,
+          user-to-user help, project news and information about using Mostro.
+          New contributors and people curious about the protocol are welcome.
         </p>
 
         <div class="actions">
-          <a class="btn primary" href="https://t.me/MostroEuropaCommunity" target="_blank" rel="noopener noreferrer">Open Telegram community</a>
-          <a class="btn" href="https://mostro.network/docs-english/" target="_blank" rel="noopener noreferrer">Official Mostro docs ↗</a>
+
+          <a
+            class="btn primary"
+            href="https://t.me/MostroEuropaCommunity"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open Telegram community
+          </a>
+
+          <a
+            class="btn"
+            href="https://mostro.network/docs-english/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Official Mostro docs ↗
+          </a>
+
         </div>
       </div>
+
     </div>
   </section>
 
   <section id="contact">
     <div class="wrap">
+
       <div class="eyebrow">Contact</div>
+
       <h2>Contact MostroEuropa.</h2>
 
       <div class="two">
+
         <article class="card">
+
           <div class="label">Nostr</div>
+
           <h3>Nostr DM</h3>
 
-          <div class="npub">npub1yag9ggwzdrekxput74qq66p88wv8r68r2f3lm3znycqqyh408ufs7htp3e</div>
+          <div class="npub">
+            npub1yag9ggwzdrekxput74qq66p88wv8r68r2f3lm3znycqqyh408ufs7htp3e
+          </div>
 
           <div class="actions">
-            <a class="btn secondary" href="https://njump.me/npub1yag9ggwzdrekxput74qq66p88wv8r68r2f3lm3znycqqyh408ufs7htp3e" target="_blank" rel="noopener noreferrer">Open Nostr profile ↗</a>
+
+            <a
+              class="btn secondary"
+              href="https://njump.me/npub1yag9ggwzdrekxput74qq66p88wv8r68r2f3lm3znycqqyh408ufs7htp3e"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open Nostr profile ↗
+            </a>
+
           </div>
         </article>
 
         <article class="card">
+
           <div class="label">SimpleX</div>
+
           <h3>SimpleX Chat</h3>
 
-          <p>Direct contact without exposing a phone number.</p>
+          <p>
+            Direct contact without exposing a phone number.
+          </p>
 
           <div class="actions">
-            <a class="btn secondary" href="https://smp17.simplex.im/a#w2lbfI-Rbea5dukWc38CVDQEzLryz8q7p2C4NGEViNg" target="_blank" rel="noopener noreferrer">Open SimpleX ↗</a>
+
+            <a
+              class="btn secondary"
+              href="https://smp17.simplex.im/a#w2lbfI-Rbea5dukWc38CVDQEzLryz8q7p2C4NGEViNg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open SimpleX ↗
+            </a>
+
           </div>
         </article>
+
       </div>
     </div>
   </section>
@@ -396,6 +659,7 @@
 
 <footer>
   <div class="wrap row">
+
     <div>
       <strong style="color:var(--ink)">MostroEuropa</strong><br>
       Independent European community around Mostro.
@@ -403,9 +667,35 @@
 
     <div>
       MostroEuropa is not the Mostro protocol itself.<br>
-      <a href="https://mostro.network/" target="_blank" rel="noopener noreferrer">Mostro Project ↗</a>
+
+      <a
+        href="https://mostro.network/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Mostro Project ↗
+      </a>
+
       &nbsp;·&nbsp;
-      <a href="https://mostro.network/docs-english/" target="_blank" rel="noopener noreferrer">Official Docs ↗</a>
+
+      <a
+        href="https://mostro.network/docs-english/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Official Docs ↗
+      </a>
+
+      &nbsp;·&nbsp;
+
+      <a
+        href="https://github.com/MostroP2P/app/releases/latest"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Official App ↗
+      </a>
+
     </div>
   </div>
 </footer>
