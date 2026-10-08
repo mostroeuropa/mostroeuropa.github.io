@@ -1,3 +1,4 @@
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -241,6 +242,9 @@
       font-size:.88rem;
     }
 
+    .steps{padding-left:22px; margin:18px 0 0; color:var(--ink)}
+    .steps li{margin:9px 0; padding-left:3px}
+
     .relay-list{
       margin:18px 0 0;
       padding:0;
@@ -365,7 +369,7 @@
     <nav aria-label="Main navigation">
       <ul>
         <li><a href="#about">About</a></li>
-        <li><a href="#get-started">Get started</a></li>
+        <li><a href="#get-started">How to connect</a></li>
         <li><a href="#community">Community</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
@@ -409,9 +413,10 @@
 
         <a
           class="btn secondary"
-          href="#get-started"
+          href="https://mostro.network/app/"
+          target="_blank" rel="noopener noreferrer"
         >
-          Get started
+          Open Web App ↗
         </a>
 
         <a
@@ -472,82 +477,74 @@
 
   <section id="get-started">
     <div class="wrap">
-
       <div class="eyebrow">Get started</div>
-
       <h2>Connect to MostroEuropa.</h2>
+      <p class="lead">Choose your client, select the MostroEuropa coordinator, and explore its order book.</p>
+      <div class="note"><strong>Important:</strong> Mostro clients may display orders from different coordinators. Select <strong>MostroEuropa</strong> to see orders published through our coordinator. Always verify the coordinator public key.</div>
 
-      <p class="lead">
-        Use the official Mostro application and add or select the
-        MostroEuropa node.
-      </p>
-
-      <div class="two">
-
-        <article class="card">
-          <div class="label">Step 1</div>
-
-          <h3>Download the official Mostro app</h3>
-
-          <p>
-            Download the latest release directly from the official
-            MostroP2P GitHub repository.
-          </p>
-
-          <div class="platforms">
-            <span class="platform">Android</span>
-            <span class="platform">Linux</span>
-            <span class="platform">Windows</span>
-            <span class="platform">macOS</span>
-            <span class="platform">iOS</span>
-          </div>
-
-          <div class="actions">
-            <a
-              class="btn primary"
-              href="https://github.com/MostroP2P/app/releases/latest"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Download latest release ↗
-            </a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="label">Step 2</div>
-
-          <h3>Add MostroEuropa</h3>
-
-          <p>
-            In the Mostro app, add or select the MostroEuropa node using
-            the following public key.
-          </p>
-
-          <div class="npub">
-            npub1mg36x8t42usn32upfxg35ppzfqf2xj76v7w2hf7trqj0ma79jtkqrj3q9m
-          </div>
-
-          <p style="margin-top:20px;">
-            If relay information is required, the following public Nostr
-            relays can be used:
-          </p>
-
-          <ul class="relay-list">
-            <li>wss://relay.mostro.network</li>
-            <li>wss://mostro-p2p.tech</li>
-            <li>wss://relay.shadowbip.com</li>
-          </ul>
-        </article>
-
+      <div class="card" style="margin-top:24px">
+        <div class="label">Recommended starting point · Beta</div>
+        <h3>Mostro Web App</h3>
+        <p>The official web app is currently in testing. Create a dedicated trading identity and securely back up your recovery phrase. You do not need to use your personal Nostr account.</p>
+        <ol class="steps">
+          <li>Open the Mostro Web App using the link below.</li>
+          <li>Create your trading account and safely store your recovery phrase. Never share it.</li>
+          <li>Open <strong>Settings → Mostro Node</strong>.</li>
+          <li>Select <strong>MostroEuropa</strong> from the coordinator list.</li>
+          <li>Return to the order book to browse available orders, create an order, or take an existing one.</li>
+        </ol>
+        <div class="actions"><a class="btn primary" href="https://mostro.network/app/" target="_blank" rel="noopener noreferrer">Open Mostro Web App ↗</a></div>
       </div>
 
-      <div class="note">
-        The Mostro application is developed and distributed by the official
-        MostroP2P project. MostroEuropa does not develop or distribute the
-        application and is an independent community around the Mostro ecosystem.
+      <div class="two" style="margin-top:18px">
+        <article class="card">
+          <div class="label">Android</div>
+          <h3>Mostro Mobile</h3>
+          <ol class="steps">
+            <li>Open <strong>Settings</strong> in Mostro Mobile.</li>
+            <li>Scroll to the <strong>Mostro</strong> section and tap the current node.</li>
+            <li>Choose <strong>Add Custom Node</strong>.</li>
+            <li>Paste the coordinator public key shown below. The name field is optional.</li>
+            <li>Confirm and select the new node.</li>
+          </ol>
+          <div class="actions"><a class="btn secondary" href="https://github.com/MostroP2P/app/releases/latest" target="_blank" rel="noopener noreferrer">Official app releases ↗</a></div>
+        </article>
+        <article class="card">
+          <div class="label">Terminal</div>
+          <h3>MostriX</h3>
+          <ol class="steps">
+            <li>Install and launch MostriX.</li>
+            <li>Open <strong>Settings</strong>.</li>
+            <li>Select <strong>Change Mostro Pubkey</strong>.</li>
+            <li>Paste the coordinator public key shown below.</li>
+            <li>Open <strong>Mostro Info</strong> to verify the coordinator details.</li>
+          </ol>
+        </article>
       </div>
 
+      <div class="card" style="margin-top:18px">
+        <div class="label">Coordinator verification</div>
+        <h3>MostroEuropa public key</h3>
+        <div class="npub">npub1mg36x8t42usn32upfxg35ppzfqf2xj76v7w2hf7trqj0ma79jtkqrj3q9m</div>
+        <p>Verify the public key rather than relying on the display name alone. If your client requires relay configuration, use the following public Nostr relays:</p>
+        <ul class="relay-list"><li>wss://relay.mostro.network</li><li>wss://mostro-p2p.tech</li><li>wss://relay.shadowbip.com</li></ul>
+      </div>
+
+      <div class="two" style="margin-top:18px">
+        <article class="card">
+          <div class="label">Order book</div>
+          <h3>Browse or create an order</h3>
+          <p>If you see a suitable order, you can choose to take it. If there is no suitable order, you can create your own and wait for another trader. Available orders depend on current activity and liquidity; a match is not guaranteed.</p>
+        </article>
+        <article class="card">
+          <div class="label">Need a hand?</div>
+          <h3>Ask the community</h3>
+          <p>First time using Mostro? Start small and ask questions before trading. Our community can help you understand the app and the coordinator selection process.</p>
+          <div class="actions"><a class="btn secondary" href="https://t.me/MostroEuropaCommunity" target="_blank" rel="noopener noreferrer">Telegram community ↗</a></div>
+        </article>
+      </div>
+
+      <div class="note">The Mostro application and protocol are developed by the independent Mostro project. MostroEuropa is a separate community and does not develop or distribute the official app. The web app is beta software; interfaces and availability may change.</div>
     </div>
   </section>
 
@@ -702,3 +699,4 @@
 
 </body>
 </html>
+```
